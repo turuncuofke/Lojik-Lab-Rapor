@@ -1,0 +1,197 @@
+
+
+\begin{figure}[!h]
+\begin{karnaugh-map}[4][4][1][$c d$][$a b$]
+\minterms{0,3,5,7,11,12,13}
+\terms{1,8,15}{${\Phi}$}
+\terms{2,4,6,9,10,14}{0}
+\implicant{0}{1}
+\implicant{3}{11}
+\implicant{12}{8}
+\implicant{5}{15}
+\implicant{1}{7}
+\implicant{12}{13}
+\implicantedge{0}{8}
+
+\end{karnaugh-map}
+\centering
+\caption{The figure shows the karnaugh map of F(a,b,c,d)}
+\label{part1-karnaugh}
+\end{figure}
+
+
+
+
+
+\begin{table}[h]
+\begin{tabular}{ccccccc}
+              & $c \cdot d$  & $a' \cdot d$ & $b \cdot d$ & $a' \cdot b' \cdot c'$ & $a \cdot b \cdot c'$ & $a \cdot c' \cdot d'$ \\
+SYMBOL         & A            & B            & C           & D                      & E                    & F                     \\
+COST           & 4            & 5            & 4           & 9                      & 7                    & 8                     \\
+COVERED POINTS & 3, 7, 11, 15 & 3, 5, 7      & 5, 7, 13    & 0                      & 12, 13               & 12                   
+\end{tabular}
+
+\caption{All prime implicants with their symbol,cost and covered points for F(a,b,c,d) are shown in the figure}
+\label{part1-prime-imp.}
+\end{table}
+
+
+
+
+
+
+
+\begin{table}[h]
+\centering
+\begin{tabular}{l|l|l|l|l|l|l|l|l|}
+\cline{2-9}
+                        & 0                        & 3 & 5 & 7 & 11                       & 12 & 13                       & COST \\ \hline
+\multicolumn{1}{|l|}{A} &                          & x &   & x & {\color[HTML]{FE0000} x} &    &                          & 4    \\ \hline
+\multicolumn{1}{|l|}{B} &                          & x & x & x &                          &    &                          & 5    \\ \hline
+\multicolumn{1}{|l|}{C} &                          &   & x & x &                          &    & {\color[HTML]{FE0000} x} & 4    \\ \hline
+\multicolumn{1}{|l|}{D} & {\color[HTML]{FE0000} x} &   &   &   &                          &    &                          & 9    \\ \hline
+\multicolumn{1}{|l|}{E} &                          &   &   &   &                          & x  & x                        & 7    \\ \hline
+\multicolumn{1}{|l|}{F} &                          &   &   &   &                          & x  &                          & 12   \\ \hline
+\end{tabular}
+\caption{The figure states the whole prime implicant table}
+\label{Part1-prime-imp-table}
+\end{table}
+
+
+
+
+
+
+\begin{table}[!h]
+\begin{center}
+    \begin{tabular}{|c|c|c|c|c|c|}
+    \hline
+         A & B & C & D & F \\
+         \hline
+         0 & 0 & 0 & 0 & 1 \\
+         \hline
+         0 & 0 & 0 & 1 & ${\Phi}$ \\
+         \hline
+         0 & 0 & 1 & 0 & 0 \\
+         \hline
+         0 & 0 & 1 & 1 & 1 \\
+         \hline
+         0 & 1 & 0 & 0 & 0 \\
+         \hline
+         0 & 1 & 0 & 1 & 1 \\
+         \hline
+         0 & 1 & 1 & 0 & 0 \\
+         \hline
+         0 & 1 & 1 & 1 & 1 \\
+         \hline
+         1 & 0 & 0 & 0 & ${\Phi}$ \\
+         \hline
+         1 & 0 & 0 & 1 & 0 \\
+         \hline
+         1 & 0 & 1 & 0 & 0 \\
+         \hline
+         1 & 0 & 1 & 1 & 1 \\
+         \hline
+         1 & 1 & 0 & 0 & 1 \\
+         \hline
+         1 & 1 & 0 & 1 & 1 \\
+         \hline
+         1 & 1 & 1 & 0 & 0 \\
+         \hline
+         1 & 1 & 1 & 1 & ${\Phi}$ \\
+         \hline
+    \hline
+    \end{tabular}
+    \caption{Truth table for the function F.}
+    \label{part1-truth-table}
+\end{center}
+\end{table}
+
+
+
+
+
+
+
+\begin{table}
+\centering
+    \begin{tabular}{|c|c|c|c|c|c|c|}
+    \hline
+         A & B & C & D & F &     \\
+         \hline
+         0 & 0 & 0 & 0 & 1 & \multirow{2}{1em}{1} \\
+         0 & 0 & 0 & 1 & ${\Phi}$ & \\
+         \hline
+         0 & 0 & 1 & 0 & 0 & \multirow{2}{1em}{d}\\
+         0 & 0 & 1 & 1 & 1 & \\
+         \hline
+         0 & 1 & 0 & 0 & 0 & \multirow{2}{1em}{d}\\
+         0 & 1 & 0 & 1 & 1 & \\
+         \hline
+         0 & 1 & 1 & 0 & 0 & \multirow{2}{1em}{d}\\
+         0 & 1 & 1 & 1 & 1 & \\
+         \hline
+         1 & 0 & 0 & 0 & ${\Phi}$ & \multirow{2}{1em}{0} \\
+         1 & 0 & 0 & 1 & 0 & \\
+         \hline
+         1 & 0 & 1 & 0 & 0 & \multirow{2}{1em}{d}\\
+         1 & 0 & 1 & 1 & 1 & \\
+         \hline
+         1 & 1 & 0 & 0 & 1 & \multirow{2}{1em}{1}\\
+         1 & 1 & 0 & 1 & 1 & \\
+         \hline
+         1 & 1 & 1 & 0 & 0 & \multirow{2}{1em}{0}\\
+         1 & 1 & 1 & 1 & ${\Phi}$ & \\
+         \hline
+    \end{tabular}
+    \caption{Figure indicates the necessary truth table in order to design the function F with using 8:1 multiplexer.}
+    \label{part1-mux-truth-table}
+
+\end{table}
+
+
+
+
+
+
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|}
+\hline
+a & b & c & a' & b' & c' & $a' \cdot c'$ & $b \cdot c$ & $F_{1}$ = $a' \cdot c'$ + $b \cdot c$     \\ \hline
+0 & 0 & 0 & 1  & 1  & 1  & 1             & 0      & 1             \\ \hline
+0 & 0 & 1 & 1  & 1  & 0  & 0             & 0      & 0               \\ \hline
+0 & 1 & 0 & 1  & 0  & 1  & 1             & 0      & 1              \\ \hline
+0 & 1 & 1 & 1  & 0  & 0  & 0             & 1      & 1               \\ \hline
+1 & 0 & 0 & 0  & 1  & 1  & 0             & 0      & 0               \\ \hline
+1 & 0 & 1 & 0  & 1  & 0  & 0             & 0      & 0           \\ \hline
+1 & 1 & 0 & 0  & 0  & 1  & 0             & 0      & 0          \\ \hline
+1 & 1 & 1 & 0  & 0  & 0  & 0             & 1      & 1               \\ \hline
+\end{tabular}
+\caption{Truth table for the F1(a,b,c)}
+\label{part4-a1-truth-table}
+\end{table}
+
+
+
+
+
+
+\begin{table}[!h]
+\centering
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|}
+\hline
+a & b & c & a' & b' & c' & $a' \cdot b' \cdot c'$ & $a \cdot b$ & $F_{2}$ = $a' \cdot b' \cdot c'$ + $a \cdot b$      \\ \hline
+0 & 0 & 0 & 1  & 1  & 1  & 1             & 0      & 1             \\ \hline
+0 & 0 & 1 & 1  & 1  & 0  & 0             & 0      & 0               \\ \hline
+0 & 1 & 0 & 1  & 0  & 1  & 0             & 0      & 0              \\ \hline
+0 & 1 & 1 & 1  & 0  & 0  & 0             & 0      & 0               \\ \hline
+1 & 0 & 0 & 0  & 1  & 1  & 0             & 0      & 0               \\ \hline
+1 & 0 & 1 & 0  & 1  & 0  & 0             & 0      & 0           \\ \hline
+1 & 1 & 0 & 0  & 0  & 1  & 0             & 1      & 1          \\ \hline
+1 & 1 & 1 & 0  & 0  & 0  & 0             & 1      & 1               \\ \hline
+\end{tabular}
+\caption{Truth table for the F2(a,b,c)}
+\label{part4-a2-truth-table}
+\end{table}
